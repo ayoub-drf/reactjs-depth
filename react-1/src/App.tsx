@@ -7,7 +7,7 @@
 // import Effect from "./ReactHookTypes/useEffectTypes/Effect";
 // import DaisyUI from "./UI/daisyui/DaisyUI";
 // import RadixUI from "./UI/radixUI/RadixUI";
-import Form from "./Forms/reactHookForm/Form";
+// import Form from "./Forms/reactHookForm/Form";
 
 
 const App = () => {  
@@ -22,7 +22,7 @@ const App = () => {
       {/* <Effect /> */}
       {/* <DaisyUI /> */}
       {/* <RadixUI /> */}
-      <Form />
+      {/* <Form /> */}
 
 
     </div>
