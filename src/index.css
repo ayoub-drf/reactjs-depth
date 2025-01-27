@@ -1,4 +1,9 @@
 input {
     border: 1px solid #2196F3;
+    display: block;
+}
+body {
+    padding: 20px
 }
 @import "tailwindcss";
+@plugin "daisyui";
