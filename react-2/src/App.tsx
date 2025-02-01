@@ -6,6 +6,11 @@
 // import VariantsGesturesAnimationCard from "./FramerMotion/VariantsGesturesAnimationCard"
 // import StaggerAnimation from "./FramerMotion/StaggerAnimation"
 // import StaggerGalleryAnimation from "./FramerMotion/StaggerGalleryAnimation"
+// import UseMotionValue1 from "./MotionHooks/UseMotionValue1"
+// import UseSpring from "./MotionHooks/UseSpring"
+// import UseTransform from "./MotionHooks/UseTransform"
+// import ScrollDriven from "./ScrollTriggerAndDriven/ScrollDriven"
+// import ScrollTrigger from "./ScrollTriggerAndDriven/ScrollTrigger"
 
 
 const App = () => {
@@ -19,6 +24,11 @@ const App = () => {
         {/* <VariantsGesturesAnimationCard /> */}
         {/* <StaggerAnimation /> */}
         {/* <StaggerGalleryAnimation /> */}
+        {/* <UseMotionValue1 /> */}
+        {/* <UseSpring /> */}
+        {/* <UseTransform /> */}
+        {/* <ScrollTrigger /> */}
+        {/* <ScrollDriven /> */}
       </>
     )
 }
