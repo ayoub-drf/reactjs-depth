@@ -10,13 +10,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 .box {
     width: 100px;
     height: 100px;
-    margin-top: 70px;
+    margin-top: 30px;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: black;
     border-radius: 50%;
 }
