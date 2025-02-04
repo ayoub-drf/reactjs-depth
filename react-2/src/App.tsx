@@ -26,18 +26,47 @@
 // import StaggeredTextReveal from "./FramerMotion/StaggeredAnimations/StaggeredTextReveal";
 // import ButtonHoverScale from "./FramerMotion/SimpleAnimations/ButtonHoverScale";
 // import ScrollIndicator from "./FramerMotion/MediumAnimations/ScrollIndicator";
+// import LoaderOne from "./FramerMotion/MediumAnimations/LoaderOne";
+// import DraggableCard from "./FramerMotion/MediumAnimations/DraggableCard";
+// import CarouselGallery from "./FramerMotion/MediumAnimations/CarouselGallery";
 
-import LoaderOne from "./FramerMotion/MediumAnimations/LoaderOne";
+import SidebarAnimation from "./FramerMotion/MediumAnimations/SidebarAnimation";
 
+// const cards = [
+//   <DraggableCard
+//     key={1}
+//     style={{
+//       background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+//     }}
+//   >
+//     Card 1
+//   </DraggableCard>,
 
+//   <DraggableCard
+//     key={2}
+//     style={{
+//       background: "linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)",
+//     }}
+//   >
+//     Card 2
+//   </DraggableCard>,
+
+//   <DraggableCard
+//     key={3}
+//     style={{
+//       background: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+//     }}
+//   >
+//     Card 3
+//   </DraggableCard>,
+// ];
 const App = () => {
 
-
-    return (
-      <>
-      <LoaderOne />
-      </>
-    )
-}
+  return (
+    <>
+    <SidebarAnimation />
+    </>
+  );
+};
 
 export default App;
