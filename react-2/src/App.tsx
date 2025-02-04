@@ -21,6 +21,13 @@
 // import SwipeableCardAnimation from "./FramerMotion/SimpleAnimations/SwipeableCardAnimation"
 // import LongPressChangeSize from "./FramerMotion/SimpleAnimations/LongPressChangeSize";
 // import GesturesAnimationBaseGallery from "./FramerMotion/SimpleAnimations/GesturesAnimationBaseGallery";
+// import StaggeredItemsList from "./FramerMotion/StaggeredAnimations/StaggeredItemsList";
+// import StaggeredImageGallery from "./FramerMotion/StaggeredAnimations/StaggeredImageGallery";
+// import StaggeredTextReveal from "./FramerMotion/StaggeredAnimations/StaggeredTextReveal";
+// import ButtonHoverScale from "./FramerMotion/SimpleAnimations/ButtonHoverScale";
+// import ScrollIndicator from "./FramerMotion/MediumAnimations/ScrollIndicator";
+
+import LoaderOne from "./FramerMotion/MediumAnimations/LoaderOne";
 
 
 const App = () => {
@@ -28,7 +35,7 @@ const App = () => {
 
     return (
       <>
-      {/* <GesturesAnimationBaseGallery /> */}
+      <LoaderOne />
       </>
     )
 }
