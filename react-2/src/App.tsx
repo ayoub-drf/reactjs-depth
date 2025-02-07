@@ -29,9 +29,10 @@
 // import LoaderOne from "./FramerMotion/MediumAnimations/LoaderOne";
 // import DraggableCard from "./FramerMotion/MediumAnimations/DraggableCard";
 // import CarouselGallery from "./FramerMotion/MediumAnimations/CarouselGallery";
-
-import SidebarAnimation from "./FramerMotion/MediumAnimations/SidebarAnimation";
-
+// import SidebarAnimation from "./FramerMotion/MediumAnimations/SidebarAnimation";
+// import ScrollCarousel from "./FramerMotion/MediumAnimations/ScrollCarousel";
+// import ProgressSteps from "./FramerMotion/MediumAnimations/ProgressSteps";
+// import PasswordGenerator from "./ZustandTutorials/PasswordGenerator";
 // const cards = [
 //   <DraggableCard
 //     key={1}
@@ -41,6 +42,9 @@ import SidebarAnimation from "./FramerMotion/MediumAnimations/SidebarAnimation";
 //   >
 //     Card 1
 //   </DraggableCard>,
+
+import Meals from "./ZustandTutorials/Meals";
+
 
 //   <DraggableCard
 //     key={2}
@@ -60,13 +64,15 @@ import SidebarAnimation from "./FramerMotion/MediumAnimations/SidebarAnimation";
 //     Card 3
 //   </DraggableCard>,
 // ];
-const App = () => {
 
+
+const App = () => {
   return (
-    <>
-    <SidebarAnimation />
-    </>
-  );
-};
+    <div>
+      <Meals />
+    </div>
+  )
+}
+
 
 export default App;
