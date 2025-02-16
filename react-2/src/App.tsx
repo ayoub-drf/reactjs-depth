@@ -33,6 +33,10 @@
 // import ScrollCarousel from "./FramerMotion/MediumAnimations/ScrollCarousel";
 // import ProgressSteps from "./FramerMotion/MediumAnimations/ProgressSteps";
 // import PasswordGenerator from "./ZustandTutorials/PasswordGenerator";
+// import Notes from './ZustandTutorials/Notes';
+
+import TodoLists from "./ZustandTutorials/TodosLists/TodoLists";
+
 // const cards = [
 //   <DraggableCard
 //     key={1}
@@ -43,7 +47,8 @@
 //     Card 1
 //   </DraggableCard>,
 
-import Meals from "./ZustandTutorials/Meals";
+
+// import Meals from "./ZustandTutorials/Meals";
 
 
 //   <DraggableCard
@@ -66,10 +71,11 @@ import Meals from "./ZustandTutorials/Meals";
 // ];
 
 
+
 const App = () => {
   return (
     <div>
-      <Meals />
+      <TodoLists />
     </div>
   )
 }

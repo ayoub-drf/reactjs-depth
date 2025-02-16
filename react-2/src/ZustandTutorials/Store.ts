@@ -109,3 +109,137 @@ export const useStore = create<StoreState>((set) => ({
   setMeals: (meals: Meal[]) => set({ meals }),
   setSearchQuery: (query: string) => set({ searchQuery: query }),
 }));
+
+interface formProps {
+  label: string;
+  type: "text" | "password" | "number" | "file" | "textarea" | "date";
+  value: string;
+}
+
+type useFormStore = {
+  formFields: formProps[];
+  addFormField: (field: formProps) => void;
+  removeFormField: (index: number) => void;
+  resetFormFields: () => void;
+  updateFormField: (index: number, updatedField: formProps) => void;
+};
+
+export const useFormStore = create<useFormStore>((set) => ({
+  formFields: [],
+  addFormField: (field) =>
+    set((state) => ({ formFields: [...state.formFields, field] })),
+  removeFormField: (index) =>
+    set((state) => ({
+      formFields: state.formFields.filter((_, i) => i !== index),
+    })),
+  resetFormFields: () => set(() => ({ formFields: [] })),
+  updateFormField: (index, updatedField) =>
+    set((state) => ({
+      formFields: state.formFields.map((field, i) =>
+        i === index ? updatedField : field
+      ),
+    })),
+}));
+
+interface Todo {
+  id: number;
+  text: string;
+  completed: boolean;
+}
+
+interface TodoStore {
+  todos: Todo[];
+  addTodo: (todo: Todo) => void;
+  removeTodo: (id: number) => void;
+  toggleTodo: (id: number) => void;
+}
+
+export const useTodoStore = create<TodoStore>((set) => ({
+  todos: [],
+  addTodo: (todo) =>
+    set((state) => ({
+      todos: [...state.todos, todo],
+    })),
+
+  removeTodo: (id) =>
+    set((state) => ({
+      todos: state.todos.filter((todo) => todo.id !== id),
+    })),
+  toggleTodo: (id) =>
+    set((state) => ({
+      todos: state.todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      ),
+    })),
+}));
+
+interface Note {
+  text: string;
+  color: string;
+}
+
+interface NotesState {
+  notes: Note[];
+  search: string;
+  editorContent: string;
+  noteColor: string;
+  currentNoteIndex: number | null;
+  setNotes: (updatedNotes: Note[]) => void;
+  setSearch: (searchValue: string) => void;
+  setEditorContent: (content: string) => void;
+  setNoteColor: (color: string) => void;
+  setCurrentNoteIndex: (index: number | null) => void;
+  addOrUpdateNote: () => void;
+  selectNote: (index: number) => void;
+}
+
+export const useNotesStore = create<NotesState>((set) => ({
+  notes: [],
+  search: "",
+  editorContent: "",
+  noteColor: "#ffffff",
+  currentNoteIndex: null,
+
+  setNotes: (updatedNotes) => set(() => ({ notes: updatedNotes })),
+  setSearch: (searchValue) => set(() => ({ search: searchValue })),
+  setEditorContent: (content) => set(() => ({ editorContent: content })),
+  setNoteColor: (color) => set(() => ({ noteColor: color })),
+  setCurrentNoteIndex: (index) => set(() => ({ currentNoteIndex: index })),
+
+  addOrUpdateNote: () =>
+    set((state) => {
+      const { editorContent, noteColor, currentNoteIndex, notes } = state;
+      if (editorContent.trim()) {
+        if (currentNoteIndex !== null) {
+          // Update existing note
+          const updatedNotes = [...notes];
+          updatedNotes[currentNoteIndex] = {
+            text: editorContent,
+            color: noteColor,
+          };
+          return {
+            notes: updatedNotes,
+            editorContent: "",
+            noteColor: "#ffffff",
+            currentNoteIndex: null,
+          };
+        } else {
+          return {
+            notes: [...notes, { text: editorContent, color: noteColor }],
+            editorContent: "",
+            noteColor: "#ffffff",
+            currentNoteIndex: null,
+          };
+        }
+      }
+
+      return state;
+    }),
+
+  selectNote: (index) =>
+    set((state) => ({
+      currentNoteIndex: index,
+      editorContent: state.notes[index].text,
+      noteColor: state.notes[index].color,
+    })),
+}));
