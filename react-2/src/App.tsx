@@ -34,8 +34,9 @@
 // import ProgressSteps from "./FramerMotion/MediumAnimations/ProgressSteps";
 // import PasswordGenerator from "./ZustandTutorials/PasswordGenerator";
 // import Notes from './ZustandTutorials/Notes';
+// import TodoLists from "./ZustandTutorials/TodosLists/TodoLists";
 
-import TodoLists from "./ZustandTutorials/TodosLists/TodoLists";
+import Counter from "./Redux/Counter";
 
 // const cards = [
 //   <DraggableCard
@@ -75,7 +76,7 @@ import TodoLists from "./ZustandTutorials/TodosLists/TodoLists";
 const App = () => {
   return (
     <div>
-      <TodoLists />
+      <Counter />
     </div>
   )
 }
